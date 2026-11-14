@@ -1,0 +1,61 @@
+/* Ivete Confeitados · interface responsiva */
+:root{--wine:#563044;--wine2:#70445d;--rose:#d6a0b3;--rose-pale:#f7edf1;--cream:#fbf8f6;--ink:#29232a;--muted:#817780;--line:#ece4e8;--green:#2f7558;--red:#b84d5d;--shadow:0 5px 24px rgba(57,34,47,.055)}
+*{box-sizing:border-box}
+body{background:var(--cream);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;letter-spacing:-.01em}
+.sidebar{width:252px;background:#fff;color:var(--ink);border-right:1px solid var(--line);padding:24px 15px;gap:26px}
+.brand{padding:3px 9px 18px;border-bottom:1px solid var(--line)}
+.logo{background:var(--rose-pale);color:var(--wine);border-radius:12px;font-size:14px;font-weight:800}
+.brand strong{font-size:15px;color:var(--wine)}.brand small{color:var(--muted);font-size:11px}
+.nav{gap:4px}.nav button{color:#6f626a;padding:11px 12px;border-radius:9px;font-size:13px;font-weight:550;transition:background .15s,color .15s}
+.nav button:hover{background:#faf5f7;color:var(--wine)}.nav button.active{background:var(--rose-pale);color:var(--wine);font-weight:700}
+.nav .nav-icon{width:19px;height:19px;display:inline-grid;place-items:center;flex:0 0 19px;color:currentColor}
+.nav .nav-icon svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.side-note{color:#9b8b93;font-size:11px;padding:8px}.main{min-width:0}
+.topbar{height:68px;padding:0 32px;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.topbar h2{font-size:15px;font-weight:700;color:var(--wine)}
+#syncStatus{display:none!important}
+#logoutBtn{font-size:12px;padding:8px 12px}
+.content{max-width:1500px;padding:30px 34px 48px}
+.page-head{align-items:center;margin-bottom:24px}.page-head h1{font-size:25px;letter-spacing:-.04em;color:var(--wine);font-weight:750}
+.sub{font-size:13px;color:var(--muted)}.btn{background:var(--wine);border-radius:9px;padding:10px 15px;font-size:13px;box-shadow:none;transition:transform .12s,background .12s}
+.btn:hover{background:var(--wine2);transform:translateY(-1px)}.btn:active{transform:translateY(0)}
+.btn.secondary{background:var(--rose-pale);color:var(--wine)}.btn.secondary:hover{background:#f0e0e7}
+.btn.ghost{border:1px solid var(--line);background:#fff}.btn.danger{background:#fff0f1;color:var(--red)}
+.card,.panel{border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow);padding:19px}
+.cards{gap:14px;margin-bottom:16px}.metric-label{font-size:12px;font-weight:550;color:var(--muted)}
+.metric{font-size:26px;letter-spacing:-.04em;color:var(--wine);font-weight:750}.metric-foot{font-size:11px}
+.panel h3{font-size:14px;font-weight:700;color:var(--wine);margin-bottom:14px}.two-col{gap:16px}
+.quick{gap:9px}.quick button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:13px;color:var(--wine);font-size:12px;transition:border .15s,background .15s}
+.quick button:hover{border-color:var(--rose);background:#fffafd}.quick b{font-size:12px}
+table{min-width:620px}th,td{padding:12px 11px;font-size:12px}th{font-size:10px;text-transform:uppercase;letter-spacing:.06em;background:#fcf9fa}
+td{color:#51464d}td strong{font-size:12px;color:var(--ink)}.pill{font-size:10px;letter-spacing:.01em}
+.smallbtn{font-size:11px;padding:6px 8px;border-radius:7px;white-space:nowrap}
+.field{gap:5px;margin-bottom:14px}.field label{font-size:11px;color:#655660;font-weight:700}
+.field input,.field select,.field textarea,.toolbar input{border:1px solid #e7dfe3;border-radius:8px;padding:10px 11px;font-size:13px;min-height:40px}
+.field input:focus,.field select:focus,.field textarea:focus,.toolbar input:focus{border-color:var(--rose);box-shadow:0 0 0 3px rgba(214,160,179,.15)}
+.modal-back{backdrop-filter:blur(3px);background:rgba(35,24,31,.48)}
+.modal{border-radius:16px;box-shadow:0 20px 70px rgba(30,15,25,.2);padding:24px}
+.modal-head h3{font-size:17px;color:var(--wine)}.modal-actions{padding-top:12px;border-top:1px solid var(--line)}
+.notice{border-radius:10px}.empty{font-size:13px;padding:28px 14px}.mobile-menu{display:none}
+#authScreen .panel{border-radius:18px;box-shadow:0 15px 50px rgba(57,34,47,.08)}
+#authScreen h1{color:var(--wine);font-size:24px;letter-spacing:-.04em}#authScreen .btn{min-height:43px}
+@media(min-width:1200px){.cards{grid-template-columns:repeat(4,minmax(0,1fr))}.two-col{grid-template-columns:minmax(0,1.25fr) minmax(340px,1fr)}}
+@media(max-width:900px){.sidebar{width:225px}.content{padding:24px 20px 38px}.topbar{padding:0 20px}}
+@media(max-width:650px){
+ .app{display:block}.sidebar{position:fixed;left:-270px;top:0;bottom:0;width:260px;z-index:20;padding:20px 14px;box-shadow:12px 0 40px rgba(35,20,29,.12);transition:left .2s}
+ .sidebar.open{left:0}.main{width:100%}.topbar{height:60px;padding:0 14px;z-index:5}
+ .mobile-menu{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;padding:0}
+ .topbar h2{font-size:14px}.content{padding:20px 13px 34px}
+ .page-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:17px}
+ .page-head h1{font-size:21px;line-height:1.2}.page-head .btn{font-size:11px;padding:9px 10px;white-space:nowrap}
+ .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-bottom:12px}
+ .card{padding:13px;border-radius:11px}.metric{font-size:20px;margin:6px 0 1px}.metric-label{font-size:10px;line-height:1.3}.metric-foot{font-size:10px}
+ .two-col{grid-template-columns:1fr;gap:12px}.panel{padding:14px;border-radius:11px}
+ .quick{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.quick button{padding:12px 10px}
+ .table-wrap{margin:0 -2px}table{min-width:590px}
+ .toolbar input{max-width:none;width:100%}.toolbar{display:flex}
+ .form-grid{grid-template-columns:1fr;gap:0}
+ .modal-back{align-items:flex-end;padding:0}.modal{width:100%;max-height:88dvh;border-radius:17px 17px 0 0;padding:19px 16px calc(18px + env(safe-area-inset-bottom))}
+ .modal-actions{position:sticky;bottom:-19px;background:white;padding:12px 0 0}
+ .modal-actions .btn{flex:1;min-height:42px}.field input,.field select,.field textarea{font-size:16px;min-height:44px}
+}
